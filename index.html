@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-CN">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta name="author" content="yzy"/>
+
+    <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//cdn.bootcss.com/modernizr/2.8.3/modernizr.min.js"></script>
+    <!--[if (lt IE 9) & (!IEMobile)]>
+    <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif] -->
+    <script src="js/bootstrap.js"></script>
+    <link href="css/__main.css" rel="stylesheet">
+    <title>猫小胖点歌台</title>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">猫小胖.com</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">歌单</a></li>
+            <li><a href="#">专属MV</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">点歌详情 <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" data-toggle="modal" data-target="#myModal1">点歌方法</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#myModal2">刷喇叭方法</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">土豪榜特权</a></li>
+                </ul>
+            </li>
+        </ul>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <!--<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>-->
+                <!--<li><a href="#">Link</a></li>-->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">查询分类 <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">歌手</a></li>
+                        <li><a href="#">歌名</a></li>
+                        <li><a href="#">编号</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-info">搜索</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">登录</a></li>
+                <li><a href="#">注册</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="row">
+    <div class="col-xs-6 col-md-3">
+        <div style="padding-left: 5%">
+            <h3>热门组合</h3>
+            <div class="jumbotron" style="padding: 5px;line-height: 30px">
+                <a class="btn btn-xs btn-primary">T-ara</a>
+                <a class="btn btn-xs btn-success">Apink</a>
+                <a class="btn btn-xs btn-info">9muses</a>
+                <a class="btn btn-xs btn-warning">AOA</a>
+                <a class="btn btn-xs btn-danger">少女时代</a>
+                <a class="btn btn-xs btn-danger">2NE1</a>
+                <a class="btn btn-xs btn-primary">sistar</a>
+                <a class="btn btn-xs btn-danger">KARA</a>
+                <a class="btn btn-xs btn-success">f(X)</a>
+                <a class="btn btn-xs btn-danger">miss A</a>
+                <a class="btn btn-xs btn-success">wonder Girls</a>
+                <a class="btn btn-xs btn-danger">4Minute</a>
+                <a class="btn btn-xs btn-warning">girl's Day</a>
+                <a class="btn btn-xs btn-info">After School</a>
+                <a class="btn btn-xs btn-warning">Dal*Shabet</a>
+                <a class="btn btn-xs btn-danger">Hello Venus</a>
+                <a class="btn btn-xs btn-danger">rania</a>
+                <a class="btn btn-xs btn-primary">Fiesta</a>
+                <a class="btn btn-xs btn-danger">KARA</a>
+                <a class="btn btn-xs btn-info">stellar</a>
+                <a class="btn btn-xs btn-success">AKB48</a>
+            </div>
+        </div>
+        <div style="padding-left: 5%">
+            <h3>热门词条</h3>
+            <div class="jumbotron" style="padding: 5px;line-height: 30px">
+                <a class="btn btn-xs btn-primary" href="#">大腿</a>
+                <a class="btn btn-xs btn-success" href="#">萝莉</a>
+                <a class="btn btn-xs btn-info" href="#">提线木偶</a>
+                <a class="btn btn-xs btn-warning" href="#">少女</a>
+                <a class="btn btn-xs btn-danger" href="#">痴汉视角</a>
+                <a class="btn btn-xs btn-danger" href="#">现场</a>
+                <a class="btn btn-xs btn-danger" href="#">写真</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-md-9">
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="#home" aria-controls="hotmv" role="tab" data-toggle="tab"><strong>热门mv</strong></a></li>
+            <li role="presentation"><a href="#profile" aria-controls="hgmv" role="tab" data-toggle="tab"><strong>韩国美腿</strong></a></li>
+            <li role="presentation"><a href="#messages" aria-controls="ommv" role="tab" data-toggle="tab"><strong>欧美劲爆</strong></a></li>
+            <li role="presentation"><a href="#settings" aria-controls="zwmv" role="tab" data-toggle="tab"><strong>中文金曲</strong></a></li>
+            <li role="presentation"><a href="#settings2" aria-controls="wrmv" role="tab" data-toggle="tab"><strong>无人问津</strong></a></li>
+        </ul>
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="hotmv">a</div>
+            <div role="tabpanel" class="tab-pane" id="hgmv">b</div>
+            <div role="tabpanel" class="tab-pane" id="ommv">c</div>
+            <div role="tabpanel" class="tab-pane" id="zwmv">d</div>
+            <div role="tabpanel" class="tab-pane" id="wrmv">e</div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel"><strong>点歌方法</strong></h4>
+            </div>
+            <div class="modal-body">
+                <h5><strong>1:直接输入歌曲"编号"进行点歌</strong></h5>
+                <ul>
+                    <li>韩国mv从编号301开始</li>
+                    <li>欧美mv从编号401开始</li>
+                    <li>国语mv从编号501开始</li>
+                </ul>
+                <h5><strong>2:老方法点歌</strong></h5>
+                <ul>
+                    <li>输入：“点歌*编号”进行点歌</li>
+                </ul>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel2"><strong>刷喇叭方法：</strong></h4>
+            </div>
+            <div class="modal-body">
+               <p><strong>输入“点歌*歌曲编号*喇叭内容”</strong></p>
+               <p>例： 点歌*301*我妍美如画</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+        console.log(e.target);
+         // newly activated tab
+        console.log(e.relatedTarget); // previous active tab
+    })
+</script>
+</body>
+</html>
