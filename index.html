@@ -72,7 +72,7 @@
     </div><!-- /.container-fluid -->
 </nav>
 <div class="row">
-    <div class="col-xs-12 col-md-3 wordKey">
+    <div class="col-xs-12 col-md-4 col-lg-2 wordKey">
         <div>
             <h4><strong>热门组合</strong></h4>
             <div class="jumbotron">
@@ -112,13 +112,13 @@
             </div>
         </div>
     </div>
-    <div class="col-xs-12 col-md-9">
+    <div class="col-xs-12 col-md-8 col-lg-7">
         <ul class="nav nav-tabs">
-            <li role="presentation" class="active"><a href="#home" aria-controls="hotmv" role="tab" data-toggle="tab"><strong>热门mv</strong></a></li>
-            <li role="presentation"><a href="#profile" aria-controls="hgmv" role="tab" data-toggle="tab"><strong>韩国美腿</strong></a></li>
-            <li role="presentation"><a href="#messages" aria-controls="ommv" role="tab" data-toggle="tab"><strong>欧美劲爆</strong></a></li>
-            <li role="presentation"><a href="#settings" aria-controls="zwmv" role="tab" data-toggle="tab"><strong>中文金曲</strong></a></li>
-            <li role="presentation"><a href="#settings2" aria-controls="wrmv" role="tab" data-toggle="tab"><strong>无人问津</strong></a></li>
+            <li role="presentation" class="active"><a id="hotTab" href="#hotmv" role="tab1" data-toggle="tab"><strong>热门mv</strong></a></li>
+            <li role="presentation"><a id="hgTab" href="#hgmv" aria-controls="hgmv" role="tab" data-toggle="tab"><strong>韩国美腿</strong></a></li>
+            <li role="presentation"><a id="omTab" href="#ommv" aria-controls="ommv" role="tab" data-toggle="tab"><strong>欧美劲爆</strong></a></li>
+            <li role="presentation"><a id="zwTab" href="#zwmv" aria-controls="zwmv" role="tab" data-toggle="tab"><strong>中文金曲</strong></a></li>
+            <li role="presentation"><a id="wrTab" href="#wrmv" aria-controls="wrmv" role="tab" data-toggle="tab"><strong>无人问津</strong></a></li>
         </ul>
         <div class="tab-content">
             <div role="tabpanel" class="tab-pane active" id="hotmv">a</div>
@@ -128,6 +128,19 @@
             <div role="tabpanel" class="tab-pane" id="wrmv">e</div>
         </div>
     </div>
+    <div class="col-lg-2 rightDiv jumbotron">
+        <h5><strong>1:直接输入歌曲"编号"进行点歌</strong></h5>
+        <ul>
+            <li>韩国mv从编号301开始</li>
+            <li>欧美mv从编号401开始</li>
+            <li>国语mv从编号501开始</li>
+        </ul>
+        <h5><strong>2:老方法点歌</strong></h5>
+        <ul>
+            <li>输入：“点歌*编号”进行点歌</li>
+        </ul>
+    </div>
+
 </div>
 
 <!-- Modal -->
@@ -176,10 +189,12 @@
 </div>
 <script>
     $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-        console.log(e.target);
-         // newly activated tab
-        console.log(e.relatedTarget); // previous active tab
+       console.log( e.target.id) // newly activated tab
     })
+
+    function getMtvData(){
+
+    }
 </script>
 </body>
 </html>
