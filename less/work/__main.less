@@ -1,3 +1,19 @@
+body{
+  font: 12px/1.5 Tahoma,'\5FAE\8F6F\96C5\9ED1','Microsoft Yahei',"hiragino sans gb", Helvetica, Arial, "\5b8b\4f53", 'sans-serif';
+}
+
+
+.mvUl{
+  width: 100%;
+  padding: 0px;
+  li{
+    display: inline-block;
+    list-style-type: none;
+    margin-left: 15px;
+    margin-top: 15px;
+  }
+}
+
 .rightDiv{
   display: block;
   margin-top: 15px;
@@ -22,3 +38,58 @@
 }
 
 
+.mvdiv{
+  line-height:20px;
+  width: 220px;
+  height: 280px;
+  padding: 2px;
+  border: 1px solid #00b3ee;
+  overflow: hidden;
+  position: relative;
+  .private{
+    position: absolute;
+    right: 0px;
+    z-index: 99;
+  }
+  p{margin-top: 10px}
+  .imgdiv{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    img{
+        width: 100%;
+    }
+    .label-primary{
+      position: absolute;
+      right: 5px;
+      bottom: 10px;
+    }
+  }
+  .info{
+    width: 100%;
+    height: 137px;
+   padding: 5px;
+    p{
+      width: 100%;
+      height: 36px;
+      overflow: hidden;
+    }
+    .name{
+      color: #00b3ee;
+    }
+    .label-info{
+      padding-top: 5px;
+      padding-bottom: 7px;
+      span{
+        padding: 4px;
+      }
+    }
+    button{
+      padding-top: 2px;
+      padding-bottom: 3px;
+      margin-left: 72px;
+    }
+  }
+
+
+}
